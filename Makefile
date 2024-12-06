@@ -15,7 +15,7 @@ libbpf:
 bpftool:
 	./fetch_bpftool bpftool $(BPFTOOL_COMMIT)
 
-objects: timer.bpf.o main.bpf.o util.bpf.o
+objects: main.bpf.o util.bpf.o
 
 %.bpf.o: %.bpf.c
 	clang $(CFLAGS) $(IFLAGS) -o $@ -c $^
